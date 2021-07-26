@@ -1,0 +1,28 @@
+{
+  "book_reviews": [
+    {
+      "new_review": "The Paper Palace - My goodness… I loved this book! Perfect to read right now too.. A family that has dealt with some devastating history. There’s so much more to this story then what the synopsis states.. so many layers ..so much that many of these characters have endured. You’ll laugh, gasp, feel enraged.. so many emotions. Perfect read for me! Oh… and just beautiful descriptions of the land and sea!",
+      "id": 1
+    },
+    {
+      "new_review": "It's Better This Way - A terrific book about a broken relationship and how both sides work together to bring peace and harmony. Fabulous read as hard to put down.",
+      "id": 2
+    },
+    {
+      "new_review": "Nine Lives - Another compelling novel from prolific author Danielle Steele. This stirring second chance romance is a breath of fresh air. A slow burn with well develop characters that are easy to get lost in. Fans of Danielle Steele are sure to be pleased. I can see this novel appealing to a broad audience.",
+      "id": 3
+    },
+    {
+      "new_review": "Project Hail Mary - Just ok. If you like lengthy descriptions of scientific process, then you’ll enjoy this book. That is 95% of it. Sadly, I found it tedious. Loved the Martian, this one, not so much.",
+      "id": 4
+    },
+    {
+      "new_review": "The Midnight Library - Enjoyed reading about parallel universes and the twist the author gave to creating the reason Nora experienced the chance to see the different universes had she made different choices. ",
+      "id": 5
+    },
+    {
+      "new_review": "The Paper Palace- was a great read and you should check it out!",
+      "id": 6
+    }
+  ]
+}

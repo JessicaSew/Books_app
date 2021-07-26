@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#section {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-left: 30px;
+}
+
+#header {
+  text-align: center;
+}
+
+#reviewBtn {
+ font-size: 16px;
+}
+
+#pTag{
+   font-size: 17px;
+   word-wrap: break-word;
+   line-height: 20px;
+}
