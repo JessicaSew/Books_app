@@ -11,11 +11,6 @@ class Books extends React.Component {
         }
     }
 
-   HandleClick(e) {
-    e.preventDefault()
-    
-   }
-
 componentDidMount(){
     fetch(URL)
     .then(response => response.json())
@@ -39,7 +34,7 @@ render() {
                 <>
                     <img src={book_image} alt={title}/>
                     <br/>
-                    <a href="#" onClick={this.HandleClick}>{title}</a>
+                    <h3>{title}</h3>
                     <p>Author: {author}</p>
                     <p>{description}</p>
                   <ul>
