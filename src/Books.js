@@ -1,4 +1,5 @@
 import React from 'react';
+import Book from './Book'
 
 const API_KEY = 'UoRKKA7wnvKbrtHgW1XpAW2FbHHQhFb7'
 const URL = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
@@ -27,22 +28,12 @@ render() {
             <section id='section'>
                 {this.state.books.map((book) => {
                   const {
-                    author,book_image, description, rank, title, primary_isbn10, publisher
+                    author,book_image, description, rank,
+                    title, primary_isbn10, publisher
                         } = book
-               
-            return(<article key={rank}>
-                <>
-                    <img src={book_image} alt={title}/>
-                    <br/>
-                    <h3>{title}</h3>
-                    <p>Author: {author}</p>
-                    <p>{description}</p>
-                  <ul>
-                    <li>Publisher: {publisher}</li>
-                    <li>ISBN: {primary_isbn10}</li>
-                  </ul>
-                </>
-                </article>
+        return(
+            <Book author={author} book_image={book_image} title={title} description={description} 
+            rank={rank} primary_isbn10={primary_isbn10} publisher={publisher}/>
                         )
                     }
                 )}  
@@ -51,12 +42,5 @@ render() {
         )
     }
 }
-
-
-
-
-
-
-
 
 export default Books

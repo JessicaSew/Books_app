@@ -35,11 +35,9 @@ handleSubmit = (e) => {
                 <br/>
                 <form onSubmit={this.handleSubmit}>
                     <label>Review: </label>
-                    <input type="text" name="new_review" onChange={this.handleChange}/>
+                    <textarea type="text" name="new_review" onChange={this.handleChange}></textarea>
                     <input type="submit"/>
                 </form>
-
-
             </div>
         )
     }

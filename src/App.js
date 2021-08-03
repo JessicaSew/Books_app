@@ -30,7 +30,7 @@ this.setState({
   render() {
    return (
     <Router> 
-    <div className="App">
+     <div className="App">
       
       <NavBar/>
       <Switch>
@@ -39,7 +39,7 @@ this.setState({
         <Route exact path='/book_reviews/new' render={() => <ReviewForm addReview={this.addReview}/>}/>
       </Switch>
 
-    </div>
+     </div>
     </Router>
   );
   }

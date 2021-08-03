@@ -10,7 +10,6 @@ textDecoration: 'none',
 color: 'white'
 }
 
-
 class NavBar extends React.Component {
 render() {
     return(
