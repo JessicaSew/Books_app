@@ -25,22 +25,22 @@ this.setState({
   book_reviews: [...this.state.book_reviews, review] 
     })
   }
-
-
   render() {
    return (
     <Router> 
      <div className="App">
       
       <NavBar/>
+      <br/>
       <Switch>
         <Route exact path='/' component={Books}/>
         <Route exact path='/book_reviews' render={() => <BookReviews book_reviews={this.state.book_reviews}/>}/>
         <Route exact path='/book_reviews/new' render={() => <ReviewForm addReview={this.addReview}/>}/>
       </Switch>
-
+      
      </div>
     </Router>
+    
   );
   }
 }

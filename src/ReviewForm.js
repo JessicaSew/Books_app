@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 class ReviewForm extends React.Component {
     constructor(){
         super()
@@ -8,11 +9,11 @@ class ReviewForm extends React.Component {
         }
     }
 
+
 handleChange = (e) => {
     this.setState({
        [e.target.name]: e.target.value})
 }
-
 handleSubmit = (e) => {
     e.preventDefault()
     fetch('http://localhost:3000/book_reviews', {
@@ -26,9 +27,9 @@ handleSubmit = (e) => {
         })
     }).then(response => response.json())
       .then(review => this.props.addReview(review))
-      e.target.reset()
+      e.target.reset()  
+     
 }
-
     render(){
         return(
             <div>

@@ -1,8 +1,10 @@
 import React from 'react';
-import Book from './Book'
 
-const API_KEY = 'UoRKKA7wnvKbrtHgW1XpAW2FbHHQhFb7'
-const URL = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
+import Book from './Book'
+import SearchBar from './SearchBar'
+
+const API_KEY = process.env.REACT_APP_API_KEY
+const URL = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${process.env.REACT_APP_API_KEY}`
 
 class Books extends React.Component {
     constructor(props){
@@ -11,6 +13,7 @@ class Books extends React.Component {
             books: []
         }
     }
+    
 
 componentDidMount(){
     fetch(URL)
@@ -24,6 +27,7 @@ componentDidMount(){
 render() {
     return (
         <div>
+            <SearchBar/>
             <h1 id="header">The Best-Seller Books</h1>
             <section id='section'>
                 {this.state.books.map((book) => {
