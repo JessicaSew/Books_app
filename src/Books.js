@@ -1,10 +1,9 @@
 import React from 'react';
-
 import Book from './Book'
 import SearchBar from './SearchBar'
 
 const API_KEY = process.env.REACT_APP_API_KEY
-const URL = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${process.env.REACT_APP_API_KEY}`
+const URL = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
 
 class Books extends React.Component {
     constructor(props){

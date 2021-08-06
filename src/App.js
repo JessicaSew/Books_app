@@ -27,9 +27,10 @@ this.setState({
   }
   render() {
    return (
+     
     <Router> 
      <div className="App">
-      
+     
       <NavBar/>
       <br/>
       <Switch>

@@ -5,25 +5,27 @@ function SearchBar(props) {
 
     const {onSearch} = props;
 
-    const {searchText, setSearchText} = useState('')
+    const [searchText, setSearchText] = useState('')
 
-//    handleInput = (e) => {
-//         const text = e.target.value
-//         setSearchText(text)
-//     }
-
-    const handleKeyPress = (e) => {
-        if (e.key === 'Enter') {
-            onSearch(searchText)
-        }
+   const handleInput = (e) => {
+        const text = e.target.value
+        setSearchText(text)
     }
+const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('submitted')
+}
+    // const handleKeyPress = (e) => {
+    //     if (e.key === 'Enter') {
+    //         onSearch(searchText)
+    //     }
+    // }
 
 return (
     <div className="search">
-        <div className="searchInput"> 
-        <input className="input"  onKeyPress={handleKeyPress} value={searchText} type="text" placeholder="Search Here..."/>
-        </div>
-        
+        <form className="searchInput" onSubmit={handleSubmit}> 
+        <input className="input"  onChange={handleInput} value={searchText} type="text" placeholder="Search Here..."/>
+        </form>
     </div>
        )   
     }

@@ -1,20 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useHistory } from "react-router-dom";
 
+const ReviewForm = (props) => {
+  const [new_review, setNewReview] = useState('');
 
-class ReviewForm extends React.Component {
-    constructor(){
-        super()
-        this.state = {
-            new_review: ''
-        }
+    let history = useHistory()
+
+    const handleChange = (e) => {
+    setNewReview(e.target.value)
     }
 
-
-handleChange = (e) => {
-    this.setState({
-       [e.target.name]: e.target.value})
-}
-handleSubmit = (e) => {
+const handleSubmit = (e) => {
     e.preventDefault()
     fetch('http://localhost:3000/book_reviews', {
         method: 'POST',
@@ -23,25 +19,23 @@ handleSubmit = (e) => {
             'Accept': 'application/json'
         },
         body: JSON.stringify({
-            new_review: this.state.new_review
-        })
+            new_review
+        }) 
     }).then(response => response.json())
-      .then(review => this.props.addReview(review))
+      .then(review => props.addReview(review))
       e.target.reset()  
-     
-}
-    render(){
-        return(
-            <div>
-                <br/>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Review: </label>
-                    <textarea type="text" name="new_review" onChange={this.handleChange}></textarea>
-                    <input type="submit"/>
-                </form>
-            </div>
-        )
-    }
+      history.push('/book_reviews')    
+} 
+    return (
+        <div>
+            <br/>
+            <form onSubmit={handleSubmit}>
+                <label>Review: </label>
+                <textarea type="text" name="new_review" onChange={handleChange}></textarea>
+                <input type="submit"/>
+            </form>
+        </div>
+    )   
 }
 
 
