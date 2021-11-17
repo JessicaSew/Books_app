@@ -1,5 +1,7 @@
 # Best Seller Books Website
 
+## Note: On web page, Press Home Button, to see the list of books 
+
 ## About Webpage
 
 The webpage contains details on the New York Times best selling books.
