@@ -42,7 +42,7 @@ class App extends React.Component {
       <div className="App">
         <NavBar/>
         <Switch>
-          <Route exact path='/' component={Books}/>
+          <Route exact path='/Books_app' component={Books}/>
           <Route exact path='/book_reviews' render={() => <BookReviews book_reviews={this.state.book_reviews}/>}/>
           <Route exact path='/book_reviews/new' render={() => <ReviewForm addReview={this.addReview}/>}/>
         </Switch>  
